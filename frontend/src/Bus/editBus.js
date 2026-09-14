@@ -6,6 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 const wrapperStyle = {
   backgroundColor: "#ffffff",
   border: "1px solid #e2e8f0",
+  height: "100%",
   borderRadius: "12px",
   padding: "24px 28px",
   maxWidth: "700px",

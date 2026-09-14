@@ -6,6 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 const wrapperStyle = {
   fontFamily: "Arial, sans-serif",
   maxWidth: "700px",
+  height: "100%",
   backgroundColor: "#ffffff",
   border: "1px solid #e2e8f0",
   borderRadius: "12px",

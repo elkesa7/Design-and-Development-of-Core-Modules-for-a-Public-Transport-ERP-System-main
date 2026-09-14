@@ -7,6 +7,7 @@ const wrapperStyle = {
   backgroundColor: "#ffffff",
   border: "1px solid #e2e8f0",
   borderRadius: "12px",
+  height: "100%",
   padding: "24px 28px",
   maxWidth: "700px",
   fontFamily: "Arial, sans-serif",
