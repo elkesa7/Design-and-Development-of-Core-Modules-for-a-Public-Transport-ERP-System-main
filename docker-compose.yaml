@@ -18,19 +18,17 @@ services:
       - ./backend:/app
       - /app/node_modules
     environment:
-      - MONGO_URL=mongodb://mongo:27017/mydb
+      - MONGO_URL=mongodb://mongo:27017/
 
   frontend:
     build: ./frontend
     container_name: frontend_c
     ports:
       - "3000:3000"
-    stdin_open: true
-    tty: true
     depends_on:
       - backend
     volumes:
-      - ./frontend:/frontend
-      - /frontend/node_modules
+      - ./frontend:/app
+      - /app/node_modules
 volumes:
   mongo-data:
