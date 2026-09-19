@@ -17,7 +17,7 @@ jobs:
           docker build ./frontend/  -t  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-frontend:latest
 
       - name: push image
-        uses: |
+        run: |
           docker login -u youssefbahri -p ${{ secrets.DOCKERHUB_TOKEN }}
           docker push  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-backend:latest
           docker push  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-frontend:latest
