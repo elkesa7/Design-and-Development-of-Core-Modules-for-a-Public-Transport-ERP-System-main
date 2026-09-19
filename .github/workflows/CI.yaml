@@ -4,27 +4,25 @@ on:
   push:
     - branches: main
 
-runs-on : ubuntu_latest
+runs-on: ubuntu-latest
 
 jobs:
   steps:
-    name: checkout
-    uses: actions/checkout@v4
+    - name: checkout
+      uses: actions/checkout@v4
 
-    name : build image
-    run : | 
-          docker build ./backend/   -t  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-backend:latest
-          docker build ./frontend/   -t  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-frontend:latest
+    - name: build image
+      run: |
+        docker build ./backend/   -t  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-backend:latest
+        docker build ./frontend/   -t  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-frontend:latest
 
-    name : login docker hub
-    uses : docker/login-action@v4
-    with:
+    - name: login docker hub
+      uses: docker/login-action@v4
+      with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    name : push image
-    uses : |
-          docker push  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-backend:latest
-          docker push  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-frontend:latest
-
-
+    - name: push image
+      uses: |
+        docker push  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-backend:latest
+        docker push  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-frontend:latest
