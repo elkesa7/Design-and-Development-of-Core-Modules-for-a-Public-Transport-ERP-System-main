@@ -13,8 +13,8 @@ jobs:
 
       - name: build image
         run: |
-          docker build ./backend/  -t  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-backend:latest
-          docker build ./frontend/  -t  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-frontend:latest
+          docker build ./backend/  -t  youssefbahri/erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-backend:latest
+          docker build ./frontend/  -t  youssefbahri/erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-frontend:latest
 
       - name: push image
         run: |
