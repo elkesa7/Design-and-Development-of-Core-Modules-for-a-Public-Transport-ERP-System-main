@@ -19,5 +19,5 @@ jobs:
       - name: push image
         run: |
           docker login -u youssefbahri -p ${{ secrets.DOCKERHUB_TOKEN }}
-          docker push  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-backend:latest
-          docker push  erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-frontend:latest
+          docker push  youssefbahri/erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-backend:latest
+          docker push  youssefbahri/erp_test/design-and-development-of-core-modules-for-a-public-transport-erp-system-main-frontend:latest
